@@ -8,8 +8,11 @@ if 'SECRET_KEY' in os.environ:
 else:
     SECRET_KEY = 'nu^td3h_fgl2!mf&+6#f*4!^5a_=axg1m%w41#7ps=074*w&_c'
 
-DEBUG = True
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
+DEBUG = False
+ALLOWED_HOSTS = [
+    'ec2-54-81-219-112.compute-1.amazonaws.com',
+    '0.0.0.0',
+    'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
