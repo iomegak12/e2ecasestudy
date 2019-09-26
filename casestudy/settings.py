@@ -2,10 +2,9 @@ import os
 from datetime import timedelta
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-secretKey = os.environ['SECRET_KEY']
 
-if not(secretKey is None):
-    SECRET_KEY = secretKey
+if 'SECRET_KEY' in os.environ:
+    SECRET_KEY = os.environ['SECRET_KEY']
 else:
     SECRET_KEY = 'nu^td3h_fgl2!mf&+6#f*4!^5a_=axg1m%w41#7ps=074*w&_c'
 
